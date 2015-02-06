@@ -7,6 +7,30 @@
 		<script src="js/slidr.js"></script>
 	</head>
 <body>
+	<div id="slidr-img" style="display: inline-block">
+	  <img data-slidr="one" src="images/um.jpeg">
+	  <img data-slidr="two" src="images/dois.jpg">
+	  <img data-slidr="three" src="images/tres.jpg">
+	</div>
+
+<script type="text/javascript" charset="utf-8">
+slidr.create('slidr-img', {
+  after: function(e) { console.log('in: ' + e.in.slidr); },
+  before: function(e) { console.log('out: ' + e.out.slidr); },
+  breadcrumbs: true,
+  controls: 'corner',
+  direction: 'vertical',
+  fade: false,
+  keyboard: true,
+  overflow: true,
+  pause: false,
+  theme: '#222',
+  timing: { 'cube': '0.5s ease-in' },
+  touch: true,
+  transition: 'cube'
+}).start();
+
+</script>
 
 
 </body>
